@@ -1,65 +1,75 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+import Image from "next/image";
+import Link from "next/link";
+
+const FloatingCircle = ({ src, className }: { src: string, className: string }) => (
+  <div 
+    className={`absolute rounded-full overflow-hidden shadow-xl bg-white/85 p-1.5 ${className}`}
+  >
+    <div className="relative w-full h-full rounded-full overflow-hidden">
+      <Image src={src} alt="Food" fill className="object-cover" />
     </div>
+  </div>
+);
+
+export default function OnboardingScreen() {
+  return (
+    <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
+      {/* Left/Top Section: Visuals */}
+      <div className="relative flex-1 bg-gradient-to-b from-[#CBA6A6] to-[#F5EBE9] overflow-hidden min-h-[55vh] md:min-h-screen">
+        <div className="relative w-full h-full max-w-[400px] mx-auto">
+          {/* Circle 1: Dumplings (Top-left, large, partially clipped) */}
+          <FloatingCircle 
+            src="/images/dumplings.png"
+            className="w-44 h-44 -top-6 -left-10 md:w-52 md:h-52"
+          />
+          {/* Circle 2: Biryani (Top-right, medium, clipped) */}
+          <FloatingCircle 
+            src="/images/biryani.png"
+            className="w-32 h-32 top-14 -right-8 md:w-40 md:h-40"
+          />
+          {/* Circle 3: Pizza (Center, large, fully visible) */}
+          <FloatingCircle 
+            src="/images/pizza.png"
+            className="w-52 h-52 top-28 left-1/2 -translate-x-1/2 md:w-64 md:h-64"
+          />
+          {/* Circle 4: Burger (Middle-left, large, clipped) */}
+          <FloatingCircle 
+            src="/images/burger.png"
+            className="w-48 h-48 top-[280px] -left-12 md:w-56 md:h-56"
+          />
+          {/* Circle 5: Spring Rolls (Bottom-center, medium, fully visible) */}
+          <FloatingCircle 
+            src="/images/spring-rolls.png"
+            className="w-32 h-32 top-[340px] left-1/2 -translate-x-1/2 ml-4 md:w-40 md:h-40"
+          />
+          {/* Circle 6: Gyoza (Bottom-right, medium, partially clipped) */}
+          <FloatingCircle 
+            src="/images/gyoza.png"
+            className="w-36 h-36 top-[260px] -right-12 md:w-44 md:h-44"
+          />
+        </div>
+      </div>
+
+      {/* Right/Bottom Section: Content */}
+      <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-white z-10 md:rounded-l-3xl shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
+        <h1 className="text-4xl md:text-5xl font-black text-[var(--color-secondary)] mb-4 tracking-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] leading-[1.1]">
+          Test the Joy of <br/> Delivery
+        </h1>
+        <p className="text-[var(--color-secondary)] opacity-80 mb-10 max-w-xs mx-auto text-sm md:text-base leading-relaxed">
+          Unlock a world of culinary delights, right at your fingertips
+        </p>
+        
+        <Link href="/home" className="w-full max-w-[300px]">
+          <button className="w-full bg-[var(--color-primary)] hover:opacity-90 text-white font-semibold py-4 rounded-full text-lg shadow-lg shadow-[#D9534F]/40 transition-all active:scale-95">
+            Get Started
+          </button>
+        </Link>
+        
+        {/* Home indicator mockup for mobile */}
+        <div className="mt-8 w-32 h-1.5 bg-gray-200 rounded-full md:hidden"></div>
+      </div>
+    </main>
   );
 }

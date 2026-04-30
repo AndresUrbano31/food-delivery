@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #E25047;
+  --color-secondary: #5A5959;
+  --color-tertiary: #D2726F;
+  --color-neutral: #F8F8F8;
+  
+  --color-brand-bg: #F8F8F8;
+  --color-brand-text: #5A5959;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --animate-bounce-slow: bounce-slow 4s ease-in-out infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(-5%); }
+    50% { transform: translateY(5%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+  }
+}
+
+/* Custom Gradients */
+.bg-gradient-home {
+  background: linear-gradient(180deg, #E6C8C5 0%, #F8F8F8 30%);
+}
+
+.bg-gradient-onboarding {
+  background: linear-gradient(180deg, #F9F1EF 0%, #F8F8F8 100%);
+}
+
+.bg-gradient-details {
+  background: linear-gradient(180deg, #E6C8C5 0%, #F8F8F8 100%);
+}
+
+.bg-gradient-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FDF8F7 100%);
+}
+
+/* Hide scrollbar for category list */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Force hide Next.js dev indicator */
+nextjs-portal {
+  display: none !important;
 }
