@@ -15,7 +15,7 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#E8D4D0] to-[#F5EBE8]">
+      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#DBC8C5] to-[#F7EBE9]">
         {/* Circle 1: Dumplings */}
         <FloatingCircle 
           src="/images/dumplings.png"
