@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const FloatingCircle = ({ src, className }: { src: string, className: string }) => (
   <div 
-    className={`absolute rounded-full overflow-hidden shadow-xl bg-white/85 p-1.5 ${className}`}
+    className={`absolute rounded-full overflow-hidden shadow-xl bg-white/85 p-2 ${className}`}
   >
     <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image src={src} alt="Food" fill className="object-cover" />
+      <Image src={src} alt="Food" fill className="w-full h-full object-cover" />
     </div>
   </div>
 );
@@ -17,37 +17,37 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative flex-1 bg-gradient-to-b from-[#CBA6A6] to-[#F5EBE9] overflow-hidden min-h-[55vh] md:min-h-screen">
-        <div className="relative w-full h-full max-w-[400px] mx-auto">
-          {/* Circle 1: Dumplings (Top-left, large, partially clipped) */}
+      <div className="relative flex-1 bg-gradient-to-b from-[#3B2A2A] to-[#F2E8E4] overflow-hidden min-h-[55vh] md:min-h-screen">
+        <div className="relative w-full h-full max-w-[400px] mx-auto md:max-w-full">
+          {/* Circle 1: Dumplings */}
           <FloatingCircle 
             src="/images/dumplings.png"
-            className="w-44 h-44 -top-6 -left-10 md:w-52 md:h-52"
+            className="w-44 h-44 top-[5%] left-[-10%] md:w-52 md:h-52 md:top-[10%] md:left-[10%]"
           />
-          {/* Circle 2: Biryani (Top-right, medium, clipped) */}
+          {/* Circle 2: Biryani */}
           <FloatingCircle 
             src="/images/biryani.png"
-            className="w-32 h-32 top-14 -right-8 md:w-40 md:h-40"
+            className="w-32 h-32 top-[15%] right-[-15%] md:w-40 md:h-40 md:top-[15%] md:right-[20%]"
           />
-          {/* Circle 3: Pizza (Center, large, fully visible) */}
+          {/* Circle 3: Pizza */}
           <FloatingCircle 
             src="/images/pizza.png"
-            className="w-52 h-52 top-28 left-1/2 -translate-x-1/2 md:w-64 md:h-64"
+            className="w-52 h-52 top-[25%] left-1/2 -translate-x-1/2 md:w-64 md:h-64 md:top-[35%] md:left-[45%]"
           />
-          {/* Circle 4: Burger (Middle-left, large, clipped) */}
+          {/* Circle 4: Burger */}
           <FloatingCircle 
             src="/images/burger.png"
-            className="w-48 h-48 top-[280px] -left-12 md:w-56 md:h-56"
+            className="w-48 h-48 top-[50%] left-[-15%] md:w-56 md:h-56 md:top-[55%] md:left-[5%]"
           />
-          {/* Circle 5: Spring Rolls (Bottom-center, medium, fully visible) */}
+          {/* Circle 5: Spring Rolls */}
           <FloatingCircle 
             src="/images/spring-rolls.png"
-            className="w-32 h-32 top-[340px] left-1/2 -translate-x-1/2 ml-4 md:w-40 md:h-40"
+            className="w-32 h-32 top-[65%] left-[35%] md:w-40 md:h-40 md:top-[75%] md:left-[35%]"
           />
-          {/* Circle 6: Gyoza (Bottom-right, medium, partially clipped) */}
+          {/* Circle 6: Gyoza */}
           <FloatingCircle 
             src="/images/gyoza.png"
-            className="w-36 h-36 top-[260px] -right-12 md:w-44 md:h-44"
+            className="w-36 h-36 top-[45%] right-[-15%] md:w-44 md:h-44 md:top-[50%] md:right-[15%]"
           />
         </div>
       </div>
