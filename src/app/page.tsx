@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const FloatingCircle = ({ src, className }: { src: string, className: string }) => (
   <div className={`absolute ${className} bg-white/80 rounded-full shadow-2xl flex items-center justify-center p-[2px] transition-all`}>
-    <div className="relative w-full h-full aspect-square rounded-full overflow-hidden">
+    <div className="relative w-full h-full rounded-full overflow-hidden">
       <img src={src} alt="Food" className="w-full h-full object-cover object-center scale-110" />
     </div>
   </div>
@@ -15,7 +15,7 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#D4BFBA] via-[#F4E9E6] to-white">
+      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#E6D5D2] via-[#F5EBE9] to-white">
         {/* Circle 1: Dumplings */}
         <FloatingCircle 
           src="/images/dumplings.png"
@@ -49,7 +49,7 @@ export default function OnboardingScreen() {
       </div>
 
       {/* Right/Bottom Section: Content */}
-      <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-white z-10 md:rounded-l-3xl shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
+      <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-white z-10 md:rounded-l-3xl md:shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
         <h1 className="text-4xl md:text-5xl font-black text-[var(--color-secondary)] mb-4 tracking-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] leading-[1.1]">
           Test the Joy of <br/> Delivery
         </h1>
