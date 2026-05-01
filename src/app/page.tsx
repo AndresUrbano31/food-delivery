@@ -19,32 +19,32 @@ export default function OnboardingScreen() {
         {/* Circle 1: Dumplings */}
         <FloatingCircle 
           src="/images/dumplings.png"
-          className="top-[2%] left-[-15%] w-[120px] h-[120px] md:top-[10%] md:left-[5%] md:w-48 md:h-48 z-10"
+          className="top-[-10px] left-[-30px] w-[140px] h-[140px] md:top-[10%] md:left-[5%] md:w-48 md:h-48 z-10"
         />
         {/* Circle 2: Biryani */}
         <FloatingCircle 
           src="/images/biryani.png"
-          className="top-[14%] right-[-15%] w-[130px] h-[130px] md:top-[15%] md:right-[15%] md:w-40 md:h-40 z-10"
+          className="top-[12%] right-[-30px] w-[140px] h-[140px] md:top-[15%] md:right-[15%] md:w-40 md:h-40 z-10"
         />
         {/* Circle 3: Pizza */}
         <FloatingCircle 
           src="/images/pizza.png"
-          className="top-[22%] left-[50%] -translate-x-1/2 w-[190px] h-[190px] md:top-[40%] md:left-[50%] md:w-72 md:h-72 z-20"
+          className="top-[22%] left-[50%] -translate-x-1/2 w-[220px] h-[220px] md:top-[40%] md:left-[50%] md:w-72 md:h-72 z-20"
         />
         {/* Circle 4: Burger */}
         <FloatingCircle 
           src="/images/burger.png"
-          className="top-[46%] left-[-12%] w-[160px] h-[160px] md:top-[65%] md:left-[10%] md:w-48 md:h-48 z-10"
+          className="top-[48%] left-[-45px] w-[190px] h-[190px] md:top-[65%] md:left-[10%] md:w-48 md:h-48 z-10"
         />
         {/* Circle 5: Spring Rolls */}
         <FloatingCircle 
           src="/images/spring-rolls.png"
-          className="top-[56%] left-[50%] -translate-x-1/2 w-[110px] h-[110px] md:top-[80%] md:left-[45%] md:w-32 md:h-32 z-10"
+          className="top-[62%] left-[50%] -translate-x-1/2 w-[110px] h-[110px] md:top-[80%] md:left-[45%] md:w-32 md:h-32 z-10"
         />
         {/* Circle 6: Gyoza */}
         <FloatingCircle 
           src="/images/gyoza.png"
-          className="top-[42%] right-[-15%] w-[140px] h-[140px] md:top-[70%] md:right-[5%] md:w-48 md:h-48 z-10"
+          className="top-[44%] right-[-40px] w-[160px] h-[160px] md:top-[70%] md:right-[5%] md:w-48 md:h-48 z-10"
         />
       </div>
 
