@@ -114,7 +114,7 @@ export default function HomePage() {
       </main>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-transparent flex justify-center z-50 pointer-events-none">
+      <div className="fixed bottom-0 left-0 right-0 bg-transparent flex justify-center z-50 pointer-events-none md:hidden">
         <div className="fixed bottom-0 left-0 right-0 bg-[#F6EBEB] rounded-t-[32px] px-8 py-5 flex justify-between items-center shadow-[0_-4px_10px_rgba(0,0,0,0.02)] md:relative md:bg-white md:shadow-none md:mt-8 md:rounded-none z-50 pointer-events-auto w-full max-w-md md:max-w-[400px]">
           <button className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center shadow-sm shrink-0">
             <img 
