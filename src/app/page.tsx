@@ -15,36 +15,36 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative overflow-hidden w-full h-[55vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#3B2A2A] to-[#F2E8E4]">
+      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#3B2A2A] to-[#F2E8E4]">
         {/* Circle 1: Dumplings */}
         <FloatingCircle 
           src="/images/dumplings.png"
-          className="top-[5%] left-[-15%] w-32 h-32 md:top-[10%] md:left-[5%] md:w-48 md:h-48 z-10"
+          className="top-[2%] left-[-10%] w-28 h-28 md:top-[10%] md:left-[5%] md:w-48 md:h-48 z-10"
         />
         {/* Circle 2: Biryani */}
         <FloatingCircle 
           src="/images/biryani.png"
-          className="top-[15%] right-[-10%] w-28 h-28 md:top-[15%] md:right-[15%] md:w-40 md:h-40 z-10"
+          className="top-[12%] right-[-5%] w-24 h-24 md:top-[15%] md:right-[15%] md:w-40 md:h-40 z-10"
         />
         {/* Circle 3: Pizza */}
         <FloatingCircle 
           src="/images/pizza.png"
-          className="top-[35%] left-[50%] -translate-x-1/2 w-48 h-48 md:top-[40%] md:left-[50%] md:w-72 md:h-72 z-20"
+          className="top-[25%] left-[50%] -translate-x-1/2 w-48 h-48 md:top-[40%] md:left-[50%] md:w-72 md:h-72 z-20"
         />
         {/* Circle 4: Burger */}
         <FloatingCircle 
           src="/images/burger.png"
-          className="top-[60%] left-[-10%] w-32 h-32 md:top-[65%] md:left-[10%] md:w-48 md:h-48 z-10"
+          className="top-[50%] left-[-12%] w-36 h-36 md:top-[65%] md:left-[10%] md:w-48 md:h-48 z-10"
         />
         {/* Circle 5: Spring Rolls */}
         <FloatingCircle 
           src="/images/spring-rolls.png"
-          className="top-[75%] left-[30%] w-24 h-24 md:top-[80%] md:left-[45%] md:w-32 md:h-32 z-10"
+          className="top-[65%] left-[35%] w-20 h-20 md:top-[80%] md:left-[45%] md:w-32 md:h-32 z-10"
         />
         {/* Circle 6: Gyoza */}
         <FloatingCircle 
           src="/images/gyoza.png"
-          className="top-[65%] right-[-15%] w-32 h-32 md:top-[70%] md:right-[5%] md:w-48 md:h-48 z-10"
+          className="top-[45%] right-[-10%] w-28 h-28 md:top-[70%] md:right-[5%] md:w-48 md:h-48 z-10"
         />
       </div>
 
