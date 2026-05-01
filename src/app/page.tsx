@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FloatingCircle = ({ src, className }: { src: string, className: string }) => (
-  <div className={`absolute ${className} bg-white/70 rounded-full shadow-2xl flex items-center justify-center p-[3px] transition-all`}>
-    <div className="relative w-full h-full rounded-full overflow-hidden">
-      <img src={src} alt="Food" className="w-full h-full object-cover" />
+  <div className={`absolute ${className} bg-white/80 rounded-full shadow-2xl flex items-center justify-center p-[2px] transition-all`}>
+    <div className="relative w-full h-full aspect-square rounded-full overflow-hidden">
+      <img src={src} alt="Food" className="w-full h-full object-cover object-center scale-110" />
     </div>
   </div>
 );
@@ -15,7 +15,7 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#DBC8C5] to-[#F7EBE9]">
+      <div className="relative overflow-hidden w-full h-[60vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#D4BFBA] via-[#F4E9E6] to-white">
         {/* Circle 1: Dumplings */}
         <FloatingCircle 
           src="/images/dumplings.png"
