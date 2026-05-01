@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FloatingCircle = ({ src, className }: { src: string, className: string }) => (
-  <div 
-    className={`absolute bg-white/85 p-2 rounded-full shadow-xl ${className}`}
-  >
+  <div className={`absolute ${className} bg-white/90 rounded-full shadow-2xl flex items-center justify-center p-[6px] transition-all`}>
     <div className="relative w-full h-full rounded-full overflow-hidden">
-      <Image src={src} alt="Food" fill className="w-full h-full object-cover" />
+      <img src={src} alt="Food" className="w-full h-full object-cover" />
     </div>
   </div>
 );
@@ -17,39 +15,37 @@ export default function OnboardingScreen() {
   return (
     <main className="min-h-screen flex flex-col md:flex-row w-full bg-white">
       {/* Left/Top Section: Visuals */}
-      <div className="relative flex-1 bg-gradient-to-b from-[#3B2A2A] to-[#F2E8E4] overflow-hidden h-[55vh] md:h-screen">
-        <div className="relative w-full h-full max-w-[400px] mx-auto md:max-w-full">
-          {/* Circle 1: Dumplings */}
-          <FloatingCircle 
-            src="/images/dumplings.png"
-            className="w-44 h-44 top-[-5%] left-[-10%] md:w-52 md:h-52 md:top-[5%] md:left-[5%]"
-          />
-          {/* Circle 2: Biryani */}
-          <FloatingCircle 
-            src="/images/biryani.png"
-            className="w-32 h-32 top-[10%] right-[-10%] md:w-40 md:h-40 md:top-[15%] md:right-[15%]"
-          />
-          {/* Circle 3: Pizza */}
-          <FloatingCircle 
-            src="/images/pizza.png"
-            className="w-52 h-52 top-[30%] left-1/2 -translate-x-1/2 md:w-72 md:h-72 md:top-[35%] md:left-[40%]"
-          />
-          {/* Circle 4: Burger */}
-          <FloatingCircle 
-            src="/images/burger.png"
-            className="w-48 h-48 top-[55%] left-[-15%] md:w-60 md:h-60 md:top-[55%] md:left-[10%]"
-          />
-          {/* Circle 5: Spring Rolls */}
-          <FloatingCircle 
-            src="/images/spring-rolls.png"
-            className="w-32 h-32 top-[70%] left-[35%] md:w-40 md:h-40 md:top-[75%] md:left-[45%]"
-          />
-          {/* Circle 6: Gyoza */}
-          <FloatingCircle 
-            src="/images/gyoza.png"
-            className="w-36 h-36 top-[50%] right-[-15%] md:w-44 md:h-44 md:top-[60%] md:right-[10%]"
-          />
-        </div>
+      <div className="relative overflow-hidden w-full h-[55vh] md:h-screen md:w-1/2 bg-gradient-to-b from-[#3B2A2A] to-[#F2E8E4]">
+        {/* Circle 1: Dumplings */}
+        <FloatingCircle 
+          src="/images/dumplings.png"
+          className="top-[5%] left-[-15%] w-32 h-32 md:top-[10%] md:left-[5%] md:w-48 md:h-48 z-10"
+        />
+        {/* Circle 2: Biryani */}
+        <FloatingCircle 
+          src="/images/biryani.png"
+          className="top-[15%] right-[-10%] w-28 h-28 md:top-[15%] md:right-[15%] md:w-40 md:h-40 z-10"
+        />
+        {/* Circle 3: Pizza */}
+        <FloatingCircle 
+          src="/images/pizza.png"
+          className="top-[35%] left-[50%] -translate-x-1/2 w-48 h-48 md:top-[40%] md:left-[50%] md:w-72 md:h-72 z-20"
+        />
+        {/* Circle 4: Burger */}
+        <FloatingCircle 
+          src="/images/burger.png"
+          className="top-[60%] left-[-10%] w-32 h-32 md:top-[65%] md:left-[10%] md:w-48 md:h-48 z-10"
+        />
+        {/* Circle 5: Spring Rolls */}
+        <FloatingCircle 
+          src="/images/spring-rolls.png"
+          className="top-[75%] left-[30%] w-24 h-24 md:top-[80%] md:left-[45%] md:w-32 md:h-32 z-10"
+        />
+        {/* Circle 6: Gyoza */}
+        <FloatingCircle 
+          src="/images/gyoza.png"
+          className="top-[65%] right-[-15%] w-32 h-32 md:top-[70%] md:right-[5%] md:w-48 md:h-48 z-10"
+        />
       </div>
 
       {/* Right/Bottom Section: Content */}
